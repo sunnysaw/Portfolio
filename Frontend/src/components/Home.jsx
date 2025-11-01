@@ -8,12 +8,14 @@ function Home({ defaultState }) {
   };
 
   const roles = [
-    "Web Developer",
     "Full_Stack Developer",
+    "Generative_AI Developer",
+    "Web Developer",
+    "AI Software_Engineer...",
     "Frontend Developer",
-    "Backend_Developer",
-    "AI-Integrated Software_Engineer...",
     "MERN_Stack Developer",
+    "Prompt Engineer",
+    "Backend_Developer",
   ];
 
   const [text, setText] = useState("");

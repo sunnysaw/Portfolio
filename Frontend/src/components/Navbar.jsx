@@ -30,17 +30,12 @@ function Navbar() {
           src={src}
           alt={label}
           onClick={handleNavigate}
-          className="w-8 hover:scale-110 transition-transform cursor-pointer hover:bg-blue-100 rounded"
+          className="w-6 sm:w-7 md:w-8 hover:scale-110 transition-transform cursor-pointer hover:bg-blue-100 rounded"
         />
 
         <span
-          className="
-      absolute left-10 top-1/2 -translate-y-1/2
-      opacity-0 group-hover:opacity-100
-      bg-black text-white text-xs px-2 py-1 rounded-lg
-      transition-all duration-200
-      whitespace-nowrap
-    "
+          className="absolute left-10 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100
+          bg-black text-white text-[10px] sm:text-xs px-2 py-1 rounded-lg transition-all duration-200 whitespace-nowrap"
         >
           {label}
         </span>
@@ -66,18 +61,14 @@ function Navbar() {
       label: "LinkedIn",
       path: "https://www.linkedin.com/in/sunny-gupta-9850b8246/",
     },
-    {
-      src: "/mail.svg",
-      label: "Gmail",
-      path: "mailto:",
-    },
+    { src: "/mail.svg", label: "Gmail", path: "mailto:" },
     { src: "/call.svg", label: "Call", path: "tel:+918084401051" },
     { src: "/resume.svg", label: "Resume", path: "/margin.pdf" },
   ];
 
   return (
-    <div className="fixed left-0 top-1/2 -translate-y-1/2 h-1/2 flex items-center">
-      <div className="flex flex-col gap-6 p-4 bg-white/10 backdrop-blur-md rounded-r-2xl shadow-2xl border-2 border-white/20 max-md:gap-4 max-md:p-2">
+    <div className="fixed left-0 top-1/2 -translate-y-1/2 z-50 max-sm:top-auto max-sm:bottom-0 max-sm:w-full max-sm:translate-y-0">
+      <div className="flex flex-col max-sm:flex-row justify-center sm:items-center gap-4 sm:gap-6 p-3 sm:p-4 bg-white/10 backdrop-blur-md rounded-r-2xl max-sm:rounded-t-2xl shadow-2xl border-2 border-white/20">
         {icons.map((icon, index) => (
           <NavIcon
             key={index}

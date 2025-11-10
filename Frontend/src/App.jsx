@@ -3,6 +3,7 @@ import Home from "./components/Home.jsx";
 import Project from "./components/Project.jsx";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
+
 function App() {
   const [defaultState, setDefaultState] = useState(true);
 
@@ -22,19 +23,19 @@ function App() {
       <div className="fixed top-3 right-3 z-50">
         {defaultState ? (
           <div
-            className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white py-2 px-3 rounded-full shadow-lg cursor-pointer hover:scale-105 transition"
+            className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white py-2 px-3 rounded-full shadow-lg cursor-pointer hover:scale-105 transition text-sm sm:text-base"
             onClick={handleOnclick}
           >
-            <span className="text-sm font-semibold">Light</span>
-            <img src="/sun.svg" alt="light mode" className="w-5" />
+            <span className="font-semibold">Light</span>
+            <img src="/sun.svg" alt="light mode" className="w-4 sm:w-5" />
           </div>
         ) : (
           <div
-            className="flex items-center gap-2 bg-black/10 backdrop-blur-md border border-gray-300 text-black py-2 px-3 rounded-full shadow-lg cursor-pointer hover:scale-105 transition"
+            className="flex items-center gap-2 bg-black/10 backdrop-blur-md border border-gray-300 text-black py-2 px-3 rounded-full shadow-lg cursor-pointer hover:scale-105 transition text-sm sm:text-base"
             onClick={handleOnclick}
           >
-            <span className="text-sm font-semibold">Dark</span>
-            <img src="/moon.svg" alt="dark mode" className="w-5" />
+            <span className="font-semibold">Dark</span>
+            <img src="/moon.svg" alt="dark mode" className="w-4 sm:w-5" />
           </div>
         )}
       </div>
@@ -43,7 +44,7 @@ function App() {
       <Navbar />
 
       {/* Page Content */}
-      <div className="ml-20 w-full">
+      <div className="ml-0 sm:ml-16 md:ml-20 w-full overflow-x-hidden">
         <Routes>
           <Route path="/" element={<Home defaultState={defaultState} />} />
           <Route
